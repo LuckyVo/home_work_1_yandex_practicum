@@ -2,18 +2,15 @@ package ru.myblog.controller;
 
 import lombok.RequiredArgsConstructor;
 import lombok.val;
-import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.web.PageableDefault;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
-import ru.myblog.dto.PostDto;
 import ru.myblog.model.request.CommentRequest;
 import ru.myblog.model.request.PostRequest;
 import ru.myblog.service.PostService;
-
-import java.util.Collections;
-import java.util.List;
 
 @Controller
 @RequestMapping("/posts")
@@ -24,19 +21,20 @@ public class PostController {
 
 
     @GetMapping
-    public String getPosts(@RequestParam(name = "tag", required = false) String tag,
-                           @RequestParam(name = "page", defaultValue = "0") int currentPage,
-                           @RequestParam(name = "size", defaultValue = "10") int pageSize,
+    public String getPosts(@PageableDefault Pageable pageable,
+//                           @RequestParam(name = "search", required = false) String search,
+//                           @RequestParam(name = "pageSize", defaultValue = "5") int pageSize,
+//                           @RequestParam(name = "pageNumber", defaultValue = "1") int currentPage,
                            Model model) {
-        Page page = postService.findAllPosts(tag, currentPage, pageSize);
-
-        model.addAttribute("pageNumber", currentPage);
-        model.addAttribute("pageSize", pageSize);
-        model.addAttribute("hasNext", page.hasNext());
-        model.addAttribute("hasPrevious", page.hasPrevious());
-        model.addAttribute("search", tag);
-        model.addAttribute("posts", page.getContent());
-
+//        Page page = postService.findAllPosts(search, currentPage, pageSize);
+//
+//        model.addAttribute("pageNumber", currentPage);
+//        model.addAttribute("pageSize", pageSize);
+//        model.addAttribute("hasNext", page.hasNext());
+//        model.addAttribute("hasPrevious", page.hasPrevious());
+//        model.addAttribute("search", search);
+//        model.addAttribute("posts", page.getContent());
+//TODO спросить что за херня
         return "posts";
     }
 
