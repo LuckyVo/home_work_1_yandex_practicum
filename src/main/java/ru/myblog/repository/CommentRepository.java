@@ -1,9 +1,18 @@
 package ru.myblog.repository;
 
-import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.stereotype.Repository;
 import ru.myblog.model.entity.CommentEntity;
+import ru.myblog.model.entity.PostEntity;
 
-@Repository
-public interface CommentRepository extends JpaRepository<CommentEntity, Long> {
+import java.util.List;
+import java.util.Map;
+
+
+public interface CommentRepository {
+
+    void save(CommentEntity entity);
+    void delete(CommentEntity entity);
+    List<CommentEntity> findByPostId(PostEntity entity);
+    List<CommentEntity> findById(Long id);
+    Map<Long, List<CommentEntity>> findByPostIds(List<Long> postIds);
+    int update(CommentEntity entity);
 }

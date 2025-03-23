@@ -15,7 +15,7 @@ public class ImageController {
     private final ImageService imageService;
 
     @GetMapping("/{id}")
-    public byte[] getImage(@PathVariable("id") Long id){
+    public byte[] getImage(@PathVariable("id") Long id) {
         return imageService.getImage(id);
     }
 

@@ -12,5 +12,4 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 @PropertySource("classpath:application.properties")
 public class AppConfig implements WebMvcConfigurer {
 
-
 }

@@ -9,7 +9,7 @@ public class ImageService {
 
     private final PostService postService;
 
-    public byte[] getImage(Long id){
+    public byte[] getImage(Long id) {
         return postService.findById(id).getImagePath();
     }
 }

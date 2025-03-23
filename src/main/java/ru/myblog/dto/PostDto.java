@@ -2,6 +2,7 @@ package ru.myblog.dto;
 
 import lombok.Data;
 import ru.myblog.model.entity.CommentEntity;
+import ru.myblog.model.entity.TagEntity;
 
 import java.util.List;
 
@@ -13,5 +14,6 @@ public class PostDto {
     private String text;
     private byte[] imagePath;
     private Integer likesCount;
-    private List<CommentEntity> commentEntities;
+    private List<CommentEntity> comment;
+    private List<TagEntity> tag;
 }
