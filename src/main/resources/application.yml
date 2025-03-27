@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: myBlog
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/myblog
+    username: postgres
+    password: postgres
+  sql:
+    init:
+      mode: always
+      schema-locations: classpath:init.sql
+
+logging:
+  level:
+    root: debug

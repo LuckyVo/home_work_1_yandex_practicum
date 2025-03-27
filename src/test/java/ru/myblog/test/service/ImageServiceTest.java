@@ -4,10 +4,10 @@ import lombok.val;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.test.context.junit.jupiter.SpringJUnitConfig;
-import ru.myblog.configuration.ContextTestConfig;
+import ru.myblog.AbstractTest;
 import ru.myblog.repository.CommentRepository;
 import ru.myblog.repository.PostRepository;
 import ru.myblog.repository.TagRepository;
@@ -19,16 +19,15 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 import static org.mockito.ArgumentMatchers.any;
 
-@SpringJUnitConfig(classes = {ContextTestConfig.class})
-public class ImageServiceTest {
+public class ImageServiceTest extends AbstractTest {
 
     @Autowired
     private ImageService imageService;
-    @Autowired
+    @Mock
     private PostRepository postRepository;
-    @Autowired
+    @Mock
     private TagRepository tagRepository;
-    @Autowired
+    @Mock
     private CommentRepository commentRepository;
 
     @BeforeEach

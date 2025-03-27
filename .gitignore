@@ -2,6 +2,10 @@ target/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
+.gradle
+.idea
+gradle/
+build
 
 ### IntelliJ IDEA ###
 .idea/modules.xml

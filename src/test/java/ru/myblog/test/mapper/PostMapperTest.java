@@ -5,16 +5,14 @@ import lombok.val;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.test.context.junit.jupiter.SpringJUnitConfig;
-import ru.myblog.configuration.ContextTestConfig;
+import ru.myblog.AbstractTest;
 import ru.myblog.mapper.PostMapper;
 import ru.myblog.testData.TestDataUtils;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-@SpringJUnitConfig(classes = {ContextTestConfig.class})
-public class PostMapperTest {
+public class PostMapperTest extends AbstractTest {
 
 
     @Autowired
