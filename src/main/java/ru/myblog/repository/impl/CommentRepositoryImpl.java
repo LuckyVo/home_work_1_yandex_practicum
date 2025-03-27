@@ -1,12 +1,12 @@
 package ru.myblog.repository.impl;
 
-import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import lombok.val;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.support.GeneratedKeyHolder;
 import org.springframework.jdbc.support.KeyHolder;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 import ru.myblog.model.entity.CommentEntity;
 import ru.myblog.model.entity.PostEntity;
 import ru.myblog.repository.CommentRepository;

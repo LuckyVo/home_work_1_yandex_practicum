@@ -1,0 +1,13 @@
+spring:
+  main:
+    allow-bean-definition-overriding: true
+    banner-mode: off
+  profiles:
+    active: test
+  application:
+    name: myBlog
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5435/myblog
+    username: postgres
+    password: postgres

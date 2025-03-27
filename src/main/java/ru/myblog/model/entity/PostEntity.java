@@ -15,6 +15,7 @@ public class PostEntity {
     private String title;
     private String text;
     private byte[] imagePath;
+    @Builder.Default
     private Integer likesCount = 0;
     private List<CommentEntity> comment;
     private List<TagEntity> tag;

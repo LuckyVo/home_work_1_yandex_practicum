@@ -1,6 +1,5 @@
 package ru.myblog.repository.impl;
 
-import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import lombok.val;
 import org.springframework.dao.EmptyResultDataAccessException;
@@ -9,6 +8,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.support.GeneratedKeyHolder;
 import org.springframework.jdbc.support.KeyHolder;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.CollectionUtils;
 import ru.myblog.model.entity.PostEntity;
 import ru.myblog.model.entity.TagEntity;
